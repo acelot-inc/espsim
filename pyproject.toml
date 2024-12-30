@@ -10,7 +10,7 @@ readme = "README.md"
 authors = [
     {name = "Esther Heid", email = "eheid@mit.edu"}
 ]
-license = "MIT"
+license = {text = "MIT"}  # Correct usage of `text` for license
 urls = { "Source" = "https://github.com/acelot-inc/espsim" }
 classifiers = [
     "Programming Language :: Python :: 3",
