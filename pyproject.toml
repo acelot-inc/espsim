@@ -1,0 +1,55 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "setuptools-scm[toml]>=6.0"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "espsim"
+version = "0.0.1"
+description = "Scoring of shape and ESP similarity with RDKit"
+readme = "README.md"
+readme-content-type = "text/markdown"
+authors = [
+    {name = "Esther Heid", email = "eheid@mit.edu"}
+]
+license = {text = "MIT"}
+homepage = "https://github.com/acelot-inc/espsim"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+keywords = [
+    "chemistry",
+    "electrostatic potential",
+    "shape",
+    "similarity",
+    "RDKit"
+]
+
+[project.urls]
+Source = "https://github.com/acelot-inc/espsim"
+
+[tool.setuptools.package-data]
+"espsim" = ["QM_137k.pt"]
+
+[tool.setuptools.dynamic]
+version = {use_scm = true}
+
+[tool.dependencies]
+# Example dependencies
+numpy = "^1.23"
+rdkit = "^2023.3.1"
+
+[tool.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.poetry.dependencies]
+# Reference your private GitHub repo
+espsim = { git = "git@github.com:acelot-inc/espsim.git", branch = "main" }

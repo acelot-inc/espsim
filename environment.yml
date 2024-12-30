@@ -2,14 +2,12 @@ name: espsim
 
 channels:
   - rdkit
-  - pytorch
   - psi4
   - conda-forge
 
 dependencies:
   - python>=3.9
   - rdkit
-  - pytorch
   - numpy
   - scikit-learn
   - scipy
